@@ -1,0 +1,15 @@
+# Idea projects
+.idea
+*.ipr
+*.iws
+*.iml
+
+# Sublime projects
+*.sublime-*
+
+# OS stuff
+.DS_Store
+Thumbs.db
+
+# Other stuff
+*~
