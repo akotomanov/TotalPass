@@ -64,11 +64,58 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-#pass {
-    
+body {
+    background:#000;
 }
+
+.pass {
+    position:relative;
+
+    margin:5px auto;
+
+    width:312px;
+    height:400px;
+
+    background:#272822;
+
+    -webkit-border-radius:9px;
+    border-radius:9px;
+
+    background-clip:padding-box;
+
+    font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight:500;
+    color:#fff;
+    }
+    .pass .banner {
+        width:312px;
+        height:124px;
+
+        background:url(../img/content/bnr_coffee.jpg) 50% 50% no-repeat;
+
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+
+        }
+    .pass .bar-code {
+        margin:auto;
+        padding:7px 10px;
+        width:240px;
+
+        -webkit-border-radius:4px;
+        border-radius:4px;
+
+        background-clip:padding-box;
+
+        background:#fff;
+
+        }
+        .pass .bar-code .caption {
+            display:block;
+            text-align:center;
+            color:#808080;
+            }
+
 
 .boarding-pass {
 
@@ -83,11 +130,11 @@ textarea {
 }
 
 .store-card {
-
+    background:#985f40;
 }
 
 .generic {
-    
+
 }
 
 
