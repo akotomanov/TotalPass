@@ -64,10 +64,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body {
-    background:#000;
-}
+body {background:#000;}
 
+/* Common pass styles */
 .pass {
     position:relative;
 
@@ -87,16 +86,53 @@ body {
     font-weight:500;
     color:#fff;
     }
-    .pass .banner {
+	.pass header {
+		padding:9px 16px 0;
+		min-height:60px;
+		}
+		.pass .logo,
+		.pass .logo-text {
+			display:inline;
+			float:left;
+			margin-right:10px;
+			}
+		.pass .header-fields {
+			float:right;
+			}
+		.pass .logo {
+			max-width:160px;
+			max-height:50px;
+
+			-webkit-box-shadow:0px 1px 1px 0px rgba(0,0,0,.35);
+			box-shadow:0px 1px 1px 0px rgba(0,0,0,.35);
+			}
+    .pass .strip {
         width:312px;
-        height:124px;
+        height:123px;
 
-        background:url(../img/content/bnr_coffee.jpg) 50% 50% no-repeat;
+	    overflow:hidden;
 
-        -webkit-background-size: 100% auto;
-        background-size: 100% auto;
+        /*background:url(../img/content/bnr_coffee.jpg) 50% 50% no-repeat;*/
+
+        /*-webkit-background-size: 100% auto;*/
+        /*background-size: 100% auto;*/
 
         }
+        .pass.square-bar-code .strip {
+	        height:110px;
+	        }
+    .pass .thumbnail {
+	    max-width:90px;
+	    max-height:90px;
+	    overflow:hidden;
+	    }
+
+/* TODO: delete this */
+.logo,
+.strip,
+.thumbnail { background:#bae1ec; }
+
+	/* Bar Code */
     .pass .bar-code {
         margin:auto;
         padding:7px 10px;
@@ -116,36 +152,48 @@ body {
             color:#808080;
             }
 
-
+/* Boarding Pass */
 .boarding-pass {
+	background:#2c6cde;
+    }
 
-}
-
+/* Event Ticket */
 .event-ticket {
+	background:#dc5d3b;
+    }
+    .event-ticket .strip {
+        height:84px;
+        }
 
-}
-
+/* Retail Coupon */
 .retail-coupon {
+	background:#dbac43;
+    }
 
-}
-
+/* Store Card */
 .store-card {
     background:#985f40;
-}
+    }
 
+/* Generic Pass */
 .generic {
-
-}
-
-
+	background:#d42727;
+    }
 
 
 
+/* TODO: Retina support */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
 
+	/* Retina-specific stuff here */
 
-
-
-
+	}
 
 
 /* ==========================================================================
