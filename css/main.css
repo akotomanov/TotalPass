@@ -66,6 +66,18 @@ textarea {
    ========================================================================== */
 body {background:#000;}
 
+/* TODO: delete this */
+.strip,
+.thumbnail,
+.primary-field,
+.secondary-fields,
+.auxiliary-fields,
+.secondary-and-auxiliary-fields,
+.pass footer,
+.departure-place,
+.destination-place,
+.header-fields { background:#bae1ec; }
+
 /* Common pass styles */
 .pass {
 	position:relative;
@@ -86,6 +98,8 @@ body {background:#000;}
 	font-weight:500;
 	color:#fff;
 	}
+
+	/* Header */
 	.pass header {
 		overflow:hidden;
 		padding:9px 16px 0;
@@ -114,7 +128,10 @@ body {background:#000;}
 			font-size:18px;
 			text-shadow:0 -1px 1px rgba(0,0,0,.5);
 			}
+
+	/* Strip */
 	.pass .strip {
+		margin:16px 0;
 		padding:16px;
 		width:280px;
 		height:91px;
@@ -130,11 +147,19 @@ body {background:#000;}
 		.pass.square-bar-code .strip {
 			height:110px;
 			}
+
+	/* Thumbnail */
 	.pass .thumbnail {
-		max-width:90px;
-		max-height:90px;
+		display:inline;
+		float:right;
+		margin:0 0 0 10px;
+		width:90px;
+		height:90px;
 		overflow:hidden;
 		}
+		.pass .thumbnail img {
+			float:right;
+			}
 
 	.pass hr {
 		margin:8px 16px;
@@ -150,6 +175,53 @@ body {background:#000;}
 	.pass .secondary-fields,
 	.pass .auxiliary-fields,
 	.pass .secondary-and-auxiliary-fields { margin:0 16px 8px; }
+    .pass .wrapper { margin:16px; }
+
+    .pass .wrapper .primary-field,
+    .pass .wrapper .secondary-fields {margin:0 0 8px;}
+    .pass .primary-secondary-fields-wrapper {
+	    float:left;
+	    width:180px;
+	    }
+
+	/* Bar Code */
+	.pass .bar-code {
+		position:absolute;
+		left:50%;
+		bottom:28px;
+		margin:0 0 0 -127px;
+		padding:7px 10px;
+		width:234px;
+
+		-webkit-border-radius:4px;
+		border-radius:4px;
+
+		background-clip:padding-box;
+
+		background:#fff;
+		}
+	.pass .bar-code img {
+		width:234px;
+		height:auto;
+		}
+	.pass .bar-code .caption {
+		display:block;
+		text-align:center;
+		color:#808080;
+		}
+
+	/* Information icon */
+	.pass .ico-info {
+		position:absolute;
+		right:6px;
+		bottom:9px;
+
+		display:block;
+		width:19px;
+		height:19px;
+
+		background:url(../img/ico_info.png) 0 0 no-repeat;
+		}
 
 .totalpass-label {
 	margin:0;
@@ -170,55 +242,6 @@ body {background:#000;}
 		text-shadow:0 -2px 1px rgba(0,0,0,.8);
 		}
 
-/* TODO: delete this */
-.strip,
-.thumbnail,
-.primary-field,
-.secondary-fields,
-.auxiliary-fields,
-.secondary-and-auxiliary-fields,
-.pass footer,
-.departure-place,
-.destination-place,
-.header-fields { background:#bae1ec; }
-
-	/* Bar Code */
-	.pass .bar-code {
-		position:absolute;
-		left:50%;
-		bottom:28px;
-		margin:0 0 0 -127px;
-		padding:7px 10px;
-		width:234px;
-
-		-webkit-border-radius:4px;
-		border-radius:4px;
-
-		background-clip:padding-box;
-
-		background:#fff;
-		}
-		.pass .bar-code img {
-			width:234px;
-			height:auto;
-			}
-		.pass .bar-code .caption {
-			display:block;
-			text-align:center;
-			color:#808080;
-			}
-
-	.pass .ico-info {
-		position:absolute;
-		right:6px;
-		bottom:9px;
-
-		display:block;	
-		width:19px;
-		height:19px;
-
-		background:url(../img/ico_info.png) 0 0 no-repeat;
-		}
 
 /* Boarding Pass */
 .boarding-pass {
@@ -260,6 +283,11 @@ body {background:#000;}
 .generic {
 	background:#d42727;
 	}
+	.generic .primary-field {
+		float:left;
+		width:180px;
+		min-height:90px;
+		}
 
 
 
