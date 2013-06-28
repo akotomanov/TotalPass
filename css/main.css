@@ -99,6 +99,9 @@ body {background:#000;}
 	color:#fff;
 	text-shadow:0 -1px 1px rgba(0,0,0,.5);
 	}
+	.pass h1,
+	.pass h2,
+	.pass h3 { font-family:Helvetica, "Helvetica Neue", Arial, sans-serif; }
 
 	/* Header */
 	.pass header {
@@ -143,11 +146,10 @@ body {background:#000;}
 
 		overflow:hidden;
 
-		/*background:url(../img/content/bnr_coffee.jpg) 50% 50% no-repeat;*/
+		background:50% 50% no-repeat;
 
-		/*-webkit-background-size: 100% auto;*/
-		/*background-size: 100% auto;*/
-
+		-webkit-background-size: 100% auto;
+		background-size: 100% auto;
 		}
 		.pass.square-bar-code .strip {
 			height:110px;
@@ -213,6 +215,7 @@ body {background:#000;}
 		display:block;
 		text-align:center;
 		color:#808080;
+		text-shadow:none;
 		}
 
 	/* Information icon */
@@ -232,19 +235,17 @@ body {background:#000;}
 	margin:0;
 	font-size:11px;
 	font-weight:700;
-	/*line-height:14px;*/
 	letter-spacing:1.25;
 	color:#613c29; /* TODO:replace it; */
 	text-shadow:0 1px 2px rgba(255,255,255,.5);
 	}
 	.totalpass-label strong {
 		display:block;
-		/*padding:5px 0 0;*/
 		font-size:20px;
 		font-weight:300;
 		letter-spacing:1;
 		color:#fff;
-		text-shadow:0 -2px 1px rgba(0,0,0,.8);
+		text-shadow:0 -1px 1px rgba(0,0,0,.5);
 		}
 
 
@@ -252,19 +253,23 @@ body {background:#000;}
 .boarding-pass {
 	background:#2c6cde;
 	}
-	.boarding-pass .departure-place,
-	.boarding-pass .destination-place {
-		display:inline;
-		float:left;
-		margin:0 16px 0 0;
-		width:110px;
+	.boarding-pass .primary-fields {
+		white-space:nowrap;
 		}
-	.boarding-pass .destination-place { margin:0; }
-	.boarding-pass .primary-fields .ico {
-		display:inline;
-		float:left;
-		margin:0 16px 0 0;
-		}
+		.boarding-pass .departure-place,
+		.boarding-pass .destination-place {
+			display:inline-block;
+			margin:0 16px 0 0;
+			width:106px;
+			vertical-align:middle;
+			}
+		.boarding-pass .destination-place { margin:0; }
+		.boarding-pass .primary-fields .ico {
+			display:inline-block;
+			margin:0 16px 0 0;
+			width:28px;
+			vertical-align:middle;
+			}
 
 /* Event Ticket */
 .event-ticket {
@@ -283,6 +288,18 @@ body {background:#000;}
 .store-card {
 	background:#985f40;
 	}
+	.store-card .primary-field h2 {
+		margin:0;
+		line-height:1;
+		font-size:64px;
+		font-weight:100;
+		text-shadow:0 -2px 1px rgba(0,0,0,.8);
+		}
+    .store-card .primary-field p {
+	    letter-spacing:.25em;
+	    font-size:18px;
+	    font-weight:100;
+	    }
 
 /* Generic Pass */
 .generic {
@@ -292,6 +309,11 @@ body {background:#000;}
 		float:left;
 		width:180px;
 		min-height:90px;
+		}
+	.generic .thumbnail img {
+		border:4px solid #fff;
+		-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,.5);
+		box-shadow: 0px 0px 1px 0px rgba(0,0,0,.5);
 		}
 
 
