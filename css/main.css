@@ -78,6 +78,73 @@ body {background:#000;}
 /*.destination-place,*/
 /*.header-fields { background:#bae1ec; }*/
 
+
+/* Flip Pass: http://davidwalsh.name/css-flip */
+
+/* entire container, keeps perspective */
+.flip-container {
+	-webkit-perspective:1000;  /* Chrome 12+, Safari 4+ */
+    -moz-perspective:1000;  /* Firefox 10+ */
+    -ms-perspective:1000;  /* IE 10 */
+    perspective:1000;
+	}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, 
+	.flip-container.hover .flipper, 
+	.flip-container.flip .flipper {
+		-webkit-transform:rotateY(180deg);
+		-moz-transform:rotateY(180deg);
+		-ms-transform:rotateY(180deg);
+		transform:rotateY(180deg);
+		}
+
+.flip-container, 
+.front, 
+.back {
+	width:320px;
+	height:480px;
+	}
+.front { background:#c3f; }
+.back { background:#3fc; }
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition:all 0.6s ease-out; 
+	-moz-transition:all 0.6s ease-out; 
+	-o-transition:all 0.6s ease-out; 
+	transition:all 0.6s ease-out; 
+
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, 
+.back {
+	backface-visibility:hidden;
+
+	position:absolute;
+	top:0;
+	left:0;
+	}
+
+/* front pane, placed above back */
+.front { z-index:2; }
+
+/* back, initially hidden pane */
+.back {
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+	-ms-transform:rotateY(180deg);
+	transform:rotateY(180deg);
+	}
+
+
+
 /* Common pass styles */
 .pass {
 	position:relative;
