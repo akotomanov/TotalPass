@@ -367,6 +367,28 @@ body {background:#000;}
 		font-weight:300;
 		color:#F6D834;
 		}
+	.boarding-pass hr { position:relative; }
+	.boarding-pass hr:before,
+	.boarding-pass hr:after {
+		position:absolute;
+		top:50%;
+		z-index:100;
+		content:"";
+		overflow:hidden;
+		display:block;
+		margin-top:-4px;
+		width:6px;
+		height:12px;
+		background:url(../img/bg_boarding_pass_sprite.png) 100% 0 no-repeat;
+		}
+	.boarding-pass hr:before {
+		margin-left:-16px; 
+		}
+	.boarding-pass hr:after {
+		left:100%;
+		margin-left:10px;
+		background-position:0 0;
+		}
 
 /* Event Ticket */
 .event-ticket {
@@ -385,7 +407,7 @@ body {background:#000;}
 	-webkit-border-radius:0;
 	border-radius:0;
 	}
-	/*.event-ticket:before {
+	.event-ticket:before {
 		position:absolute;
 		top:0;
 		left:50%;
@@ -396,7 +418,7 @@ body {background:#000;}
 		width:62px;
 		height:19px;
 		background:url(../img/ticket_top.png) 50% 0 no-repeat;
-		}*/
+		}
 	.event-ticket .strip {
 		height:84px;
 		}
@@ -454,6 +476,24 @@ body {background:#000;}
 	-webkit-border-radius:0;
 	border-radius:0;
 	}
+	.retail-coupon:before,
+	.retail-coupon:after {
+		position:absolute;
+		left:0;
+		z-index:100;
+		content:"";
+		display:block;
+		width:312px;
+		height:8px;
+		}
+	.retail-coupon:before {
+		top:0;
+		background:url(../img/bg_coupon_top.png) 50% 0 no-repeat;
+		}
+	.retail-coupon:after {
+		bottom:0;
+		background:url(../img/bg_coupon_bottom.png) 50% 100% no-repeat;
+		}
 	.retail-coupon .strip { margin:0 0 8px; }
 		.retail-coupon .strip .primary-field {
 			border:none;
