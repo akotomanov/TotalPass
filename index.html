@@ -185,10 +185,11 @@
 
 				<a class="ico-info ir" href="#">info</a>
 
-				<div class="bg-image" style="background-image:url(img/content/bg_jazz.jpg);">
-					<svg id="svg-image-blur">
-					    <filter id="blur-effect">
-					        <feGaussianBlur stdDeviation="10" />
+				<div class="bg-image">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="280" height="280">
+						<image class="svg-blur-img" style="filter:url(#blur-effect);" xlink:href="img/content/bg_jazz.png" width="280" height="280" />
+					    <filter id="blur-effect" x="-10%" y="-10%" width="120%" height="120%">
+					        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
 					    </filter>
 					</svg>
 				</div>

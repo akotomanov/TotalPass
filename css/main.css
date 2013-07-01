@@ -431,14 +431,12 @@ body {background:#000;}
 		}
 	.event-ticket .bg-image { 
 		position:absolute;
-		left:8px;
-		top:78px;
+		left:50%;
+		top:50%;
 		z-index:1;
-		width:296px;
-		height:252px;
-		background:transparent 50% 50% no-repeat;
-		-webkit-filter:blur(10px); 
-		filter:url(#blur-effect); 
+		margin:-140px 0 0 -140px;
+		width:280px;
+		height:280px;
 		}
 	.event-ticket .label {
 		text-transform:lowercase;
