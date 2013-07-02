@@ -79,84 +79,53 @@ body {background:#000;}
 /*.header-fields { background:#bae1ec; }*/
 
 
+
+/*
+ * Common pass styles
+ -------------------------------------------------------------------------------- */
 /* Flip Pass: http://davidwalsh.name/css-flip */
-
-/* entire container, keeps perspective */
-.flip-container {
-	-webkit-perspective:1000;  /* Chrome 12+, Safari 4+ */
-    -moz-perspective:1000;  /* Firefox 10+ */
-    -ms-perspective:1000;  /* IE 10 */
-    perspective:1000;
+.pass {
+	-webkit-perspective:1000;
+	-moz-perspective:1000;
+	-ms-perspective:1000;
+	perspective:1000;
+	margin:5px auto;
 	}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, 
-	.flip-container.hover .flipper, 
-	.flip-container.flip .flipper {
-		-webkit-transform:rotateY(180deg);
-		-moz-transform:rotateY(180deg);
-		-ms-transform:rotateY(180deg);
-		transform:rotateY(180deg);
+	.flipper {
+		-webkit-transition:0.6s;
+		-moz-transition:0.6s;
+		-o-transition:0.6s;
+		transition:0.6s;
+		-webkit-transform-style:preserve-3d;
+		-moz-transform-style:preserve-3d;
+		-ms-transform-style:preserve-3d;
+		transform-style:preserve-3d;
+		position: relative;
 		}
-
-.flip-container, 
-.front, 
-.back {
-	width:320px;
-	height:480px;
+		.pass:hover .flipper,
+		.pass.hover .flipper,
+		.pass.flip .flipper {
+			-webkit-transform:rotateY(180deg);
+			-moz-transform:rotateY(180deg);
+			-ms-transform:rotateY(180deg);
+			transform:rotateY(180deg);
+			}
+.pass,
+.pass-front-side,
+.pass-back-side {
+	width:312px;
+	height:400px;
 	}
-.front { background:#c3f; }
-.back { background:#3fc; }
 
-/* flip speed goes here */
-.flipper {
-	-webkit-transition:all 0.6s ease-out; 
-	-moz-transition:all 0.6s ease-out; 
-	-o-transition:all 0.6s ease-out; 
-	transition:all 0.6s ease-out; 
-
-	-webkit-transform-style:preserve-3d;
-	-moz-transform-style:preserve-3d;
-	-ms-transform-style:preserve-3d;
-	transform-style:preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, 
-.back {
+.pass-front-side,
+.pass-back-side {
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
 	backface-visibility:hidden;
-
 	position:absolute;
 	top:0;
 	left:0;
-	}
-
-/* front pane, placed above back */
-.front { z-index:2; }
-
-/* back, initially hidden pane */
-.back {
-	-webkit-transform:rotateY(180deg);
-	-moz-transform:rotateY(180deg);
-	-ms-transform:rotateY(180deg);
-	transform:rotateY(180deg);
-	}
-
-
-
-/* Common pass styles */
-.pass {
-	position:relative;
-
-	margin:5px auto;
-
-	width:312px;
-	height:400px;
-
 	background:#272822;
-
-
 	-webkit-box-shadow:inset 0 3px 3px 0 rgba(255,255,255,.5), 
 		inset 0 -2px 2px 0 rgba(0,0,0,.5), 
 		inset 0 -2px 5px 0 rgba(0,0,0,.5),
@@ -165,11 +134,8 @@ body {background:#000;}
 		inset 0 -2px 2px 0 rgba(0,0,0,.5),
 		inset 0 -2px 5px 0 rgba(0,0,0,.5), 
 		0 1px 5px 0 rgba(0,0,0,1);
-
-
 	-webkit-border-radius:9px;
 	border-radius:9px;
-
 	background-clip:padding-box;
 
 	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -177,200 +143,19 @@ body {background:#000;}
 	color:#fff;
 	text-shadow:0 -1px 1px rgba(0,0,0,.5);
 	}
-	.pass h1,
-	.pass h2,
-	.pass h3 { font-family:Helvetica, "Helvetica Neue", Arial, sans-serif; }
-
-	.pass h2 {
-		margin:8px 0;
-		overflow:hidden;
-		white-space:nowrap;
-		text-overflow:ellipsis;
-		line-height:1;
-		font-size:32px;
-		font-weight:100;
-		text-shadow:0 -2px 1px rgba(0,0,0,.8);
-		}
-	.pass h2+p {
-		margin:0;
-		letter-spacing:.03em;
-	    font-size:16px;
-	    font-weight:300;
-		}
-
-	.pass dl { margin-top:0; }
-	.pass dd { margin:0; }
-
-	/* Header */
-	.pass header {
-		overflow:hidden;
-		padding:9px 16px 0;
-		max-height:62px;
-		}
-		.pass .logo-container {
-			overflow:hidden;
-			float:left;
-			width:184px;
-			white-space:nowrap;
-			}
-			.pass .logo,
-			.pass .logo-text {
-				display:inline-block;
-				vertical-align:middle;
-				}
-			.pass .logo {
-				margin:0 8px 0 0;
-				max-width:160px;
-				max-height:50px;
-				}
-			.pass .logo-text {
-				overflow:hidden;
-				max-width:186px;
-				font-size:18px;
-				white-space:nowrap;
-				text-overflow:ellipsis;
-				}
-		.pass .header-fields {
-			float:right;
-			width:86px;
-			}
-
-	/* Strip */
-	.pass .strip {
-		overflow:hidden;
-		margin:16px 0;
-		padding:1px 0 0;
-		width:312px;
-		height:123px;
-		background:50% 50% no-repeat;
-		-webkit-background-size: 100% auto;
-		background-size: 100% auto;
-		}
-		.pass.square-bar-code .strip {
-			height:110px;
-			}
-		.pass .strip .primary-field {
-			padding:16px;
-			border-top:1px solid rgba(255,255,255,.3);
-			border-bottom:1px solid rgba(255,255,255,.1);
-			background:-moz-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-			background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-			background:-webkit-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-			background:-o-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-			background:-ms-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* IE10+ */
-			background:linear-gradient(135deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* W3C */
-			filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-			}
-
-	/* Thumbnail */
-	.pass .thumbnail {
-		display:inline;
-		float:right;
-		margin:0 0 0 10px;
-		width:90px;
-		height:90px;
-		overflow:hidden;
-		}
-		.pass .thumbnail img {
-			float:right;
-			border:4px solid #fff;
-			-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,.5);
-			box-shadow: 0px 1px 3px 0px rgba(0,0,0,.5);
-			}
-
-	.pass hr {
-		margin:8px 16px;
-		border:1px solid rgba(0,0,0,.2);
-		border-width:0 0 1px;
-		-webkit-box-shadow:0 1px 1px 0 rgba(255,255,255,.3), 0 0 1px 1px rgba(255,255,255,.1);
-		box-shadow:0 1px 1px 0 rgba(255,255,255,.3), 0 0 1px 1px rgba(255,255,255,.1);
-		}
-
-	.pass footer,
-	.pass .primary-fields,
-	.pass .secondary-fields,
-	.pass .auxiliary-fields,
-	.pass .secondary-and-auxiliary-fields { margin:0 16px 8px; }
-    .pass .wrapper { margin:16px 16px 0; }
-
-    .pass .wrapper .primary-field,
-    .pass .wrapper .secondary-fields {margin:0 0 8px;}
-    .pass .primary-secondary-fields-wrapper {
-	    float:left;
-	    width:180px;
-	    }
-
-	/* Bar Code */
-	.pass .bar-code {
-		position:absolute;
-		left:50%;
-		bottom:28px;
-		z-index:11;
-		margin:0 0 0 -127px;
-		padding:8px;
-		width:234px;
-
-		-webkit-border-radius:4px;
-		border-radius:4px;
-
-		background-clip:padding-box;
-
-		background:#fff;
-		-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.5);
-		box-shadow:0 2px 4px 0 rgba(0,0,0,.5);
-		}
-		.pass.square-bar-code .bar-code {
-			margin-left:-55px;
-			padding:0 0 8px;
-			width:auto;
-			}
-	.pass .bar-code img {
-		display:block;
-		margin:auto;
-		width:234px;
-		height:auto;
-		}
-		.pass.square-bar-code .bar-code img {
-			width:110px;
-			height:110px;
-			}
-	.pass .bar-code .caption {
-		display:block;
-		text-align:center;
-		font-size:12px;
-		color:#808080;
-		text-shadow:none;
-		}
-
-	/* Information icon */
-	.pass .ico-info {
-		position:absolute;
-		right:6px;
-		bottom:9px;
-		z-index:10;
-
-		display:block;
-		width:19px;
-		height:19px;
-
-		background:url(../img/ico_info.png) 0 0 no-repeat;
-		}
-
-.totalpass-label {
-	margin:0;
-	font-size:11px;
-	font-weight:700;
-	letter-spacing:.1em;
-	text-shadow:0 1px 2px rgba(0,0,0,.5);
+.pass-front-side { z-index:2; }
+.pass-back-side {
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+	-ms-transform:rotateY(180deg);
+	transform:rotateY(180deg);
 	}
-	.totalpass-label strong {
-		display:block;
-		font-size:20px;
-		font-weight:300;
-		letter-spacing:.05em;
-		color:rgba(255,255,255,.8);
-		}
 
+.pass h1,
+.pass h2,
+.pass h3 { font-family:Helvetica, "Helvetica Neue", Arial, sans-serif; }
+
+/* Mini Grid System */
 .row {
 	margin:0 0 0 -8px;
 	}
@@ -384,18 +169,302 @@ body {background:#000;}
 	.row .span3 { width:88px; }
 		.header-fields .row .span2 { width:39px; }
 
-
-/* Boarding Pass */
-.boarding-pass {
-	background: #64aaf0; /* Old browsers */
-	background: -moz-linear-gradient(top, #64aaf0 0%, #3b86e5 10%, #295dce 90%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#64aaf0), color-stop(10%,#3b86e5), color-stop(90%,#295dce)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* IE10+ */
-	background: linear-gradient(to bottom, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64aaf0', endColorstr='#295dce',GradientType=0 ); /* IE6-9 */
+/*
+ * Front Side
+ -------------------------------------------------------------------------------- */
+.pass-front-side h2 {
+	margin:8px 0;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	line-height:1;
+	font-size:32px;
+	font-weight:100;
+	text-shadow:0 -2px 1px rgba(0,0,0,.8);
 	}
+.pass-front-side h2+p {
+	margin:0;
+	letter-spacing:.03em;
+    font-size:16px;
+    font-weight:300;
+	}
+
+.pass-front-side dl { margin-top:0; }
+.pass-front-side dd { margin:0; }
+
+/* Header */
+.pass-front-side header {
+	overflow:hidden;
+	padding:9px 16px 0;
+	max-height:62px;
+	}
+	.pass-front-side .logo-container {
+		overflow:hidden;
+		float:left;
+		width:184px;
+		white-space:nowrap;
+		}
+		.pass-front-side .logo,
+		.pass-front-side .logo-text {
+			display:inline-block;
+			vertical-align:middle;
+			}
+		.pass-front-side .logo {
+			margin:0 8px 0 0;
+			max-width:160px;
+			max-height:50px;
+			}
+		.pass-front-side .logo-text {
+			overflow:hidden;
+			max-width:186px;
+			font-size:18px;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			}
+	.pass-front-side .header-fields {
+		float:right;
+		width:86px;
+		}
+
+/* TotalPass Branding */
+.totalpass-label {
+	margin:0;
+	font-size:11px;
+	font-weight:700;
+	letter-spacing:.1em;
+	text-shadow:0 1px 2px rgba(0,0,0,.5);
+	}
+.totalpass-label strong {
+	display:block;
+	font-size:20px;
+	font-weight:300;
+	letter-spacing:.05em;
+	color:rgba(255,255,255,.8);
+	}
+
+/* Strip */
+.pass-front-side .strip {
+	overflow:hidden;
+	margin:16px 0;
+	padding:1px 0 0;
+	width:312px;
+	height:123px;
+	background:50% 50% no-repeat;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	}
+	.square-bar-code .pass-front-side .strip {
+		height:110px;
+		}
+	.pass-front-side .strip .primary-field {
+		padding:16px;
+		border-top:1px solid rgba(255,255,255,.3);
+		border-bottom:1px solid rgba(255,255,255,.1);
+		background:-moz-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+		background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+		background:-webkit-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+		background:-o-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+		background:-ms-linear-gradient(-45deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* IE10+ */
+		background:linear-gradient(135deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* W3C */
+		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		}
+
+/* Thumbnail */
+.pass-front-side .thumbnail {
+	display:inline;
+	float:right;
+	margin:0 0 0 10px;
+	width:90px;
+	height:90px;
+	overflow:hidden;
+	}
+	.pass-front-side .thumbnail img {
+		float:right;
+		border:4px solid #fff;
+		-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,.5);
+		box-shadow: 0px 1px 3px 0px rgba(0,0,0,.5);
+		}
+
+.pass-front-side hr {
+	margin:8px 16px;
+	border:1px solid rgba(0,0,0,.2);
+	border-width:0 0 1px;
+	-webkit-box-shadow:0 1px 1px 0 rgba(255,255,255,.3), 0 0 1px 1px rgba(255,255,255,.1);
+	box-shadow:0 1px 1px 0 rgba(255,255,255,.3), 0 0 1px 1px rgba(255,255,255,.1);
+	}
+
+.pass-front-side footer,
+.pass-front-side .primary-fields,
+.pass-front-side .secondary-fields,
+.pass-front-side .auxiliary-fields,
+.pass-front-side .secondary-and-auxiliary-fields { margin:0 16px 8px; }
+.pass-front-side .wrapper { margin:16px 16px 0; }
+    .pass-front-side .wrapper .primary-field,
+    .pass-front-side .wrapper .secondary-fields {margin:0 0 8px;}
+.pass-front-side .primary-secondary-fields-wrapper {
+    float:left;
+    width:180px;
+    }
+
+/* Bar Code */
+.pass-front-side .bar-code {
+	position:absolute;
+	left:50%;
+	bottom:28px;
+	z-index:11;
+	margin:0 0 0 -127px;
+	padding:8px;
+	width:234px;
+
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	background-clip:padding-box;
+
+	background:#fff;
+	-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.5);
+	box-shadow:0 2px 4px 0 rgba(0,0,0,.5);
+	}
+	.square-bar-code .pass-front-side .bar-code {
+		margin-left:-55px;
+		padding:0 0 8px;
+		width:auto;
+		}
+	.pass-front-side .bar-code img {
+		display:block;
+		margin:auto;
+		width:234px;
+		height:auto;
+		}
+		.square-bar-code .pass-front-side .bar-code img {
+			width:110px;
+			height:110px;
+			}
+	.pass-front-side .bar-code .caption {
+		display:block;
+		text-align:center;
+		font-size:12px;
+		color:#808080;
+		text-shadow:none;
+		}
+
+/* Information icon */
+.pass-front-side .ico-info {
+	position:absolute;
+	right:6px;
+	bottom:9px;
+	z-index:10;
+
+	display:block;
+	width:19px;
+	height:19px;
+
+	background:url(../img/ico_info.png) 0 0 no-repeat;
+	}
+
+
+/*
+ * Back Side
+ -------------------------------------------------------------------------------- */
+.pass-back-side header {
+	padding:7px 8px 8px;
+	height:29px;
+	}
+	.pass-back-side .btn {
+		padding:3px 14px 5px;
+		height:29px;
+		-webkit-border-radius:5px;
+		border-radius:5px;
+		background-clip:padding-box;
+		border:1px solid rgba(0,0,0,.5);
+		background:none;
+		background:-moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+		background:-webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+		background:-o-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+		background:-ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* IE10+ */
+		background:linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%); /* W3C */
+		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+		-webkit-box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.5), 0 1px 2px 0 rgba(255,255,255,.5);
+		box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.5), 0 1px 2px 0 rgba(255,255,255,.5);
+		line-height:20px;
+		font-size:16px;
+		font-weight:500;
+		color:#fff;
+		text-shadow:0 -1px 1px rgba(0,0,0,.8);
+		}
+	.pass-back-side .btn-done {
+		float:right;
+		}
+.pass-back-side .content-container {
+	overflow-x:hidden;
+	overflow-y:auto;
+	margin:0 8px 5px;
+	padding:7px 7px 0;
+	height:342px;
+	background:#f8f8f8;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background-clip:padding-box;
+	}
+	.pass-back-side .content {
+		margin:0 0 12px;
+		padding:12px 12px 24px;
+		border:1px solid #e2e2e2;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		background-clip:padding-box;
+		background:#fff;
+		font-size:14px;
+		font-weight:300;
+		color:#a1a1a1;
+		text-shadow:none;
+		}
+		.pass-back-side .content h3,
+		.pass-back-side .content h4 {
+			margin:0 0 .5em;
+			font-size:16px;
+			font-weight:500;
+			}
+		.pass-back-side .content p {
+			margin:0 16px .5em 8px;
+			}
+
+
+/*
+ * Boarding Pass
+ -------------------------------------------------------------------------------- */
+.boarding-pass .pass-front-side,
+.boarding-pass .pass-back-side {
+	background:#64aaf0; /* Old browsers */
+	background:-moz-linear-gradient(top, #64aaf0 0%, #3b86e5 10%, #295dce 90%); /* FF3.6+ */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#64aaf0), color-stop(10%,#3b86e5), color-stop(90%,#295dce)); /* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* IE10+ */
+	background:linear-gradient(to bottom, #64aaf0 0%,#3b86e5 10%,#295dce 90%); /* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#64aaf0', endColorstr='#295dce',GradientType=0 ); /* IE6-9 */
+	}
+	.boarding-pass .pass-front-side:before,
+	.boarding-pass .pass-front-side:after,
+	.boarding-pass .pass-back-side:before,
+	.boarding-pass .pass-back-side:after {
+		position:absolute;
+		top:67px;
+		z-index:100;
+		content:"";
+		overflow:hidden;
+		display:block;
+		margin-top:-4px;
+		width:6px;
+		height:12px;
+		background:url(../img/bg_boarding_pass_sprite.png) 100% 0 no-repeat;
+		}
+	.boarding-pass .pass-front-side:after,
+	.boarding-pass .pass-back-side:after {
+		right:0;
+		background-position:0 0;
+		}
+
 	.boarding-pass .primary-fields {
 		white-space:nowrap;
 		}
@@ -434,28 +503,7 @@ body {background:#000;}
 		font-weight:300;
 		color:#F6D834;
 		}
-	.boarding-pass hr { position:relative; }
-	.boarding-pass hr:before,
-	.boarding-pass hr:after {
-		position:absolute;
-		top:50%;
-		z-index:100;
-		content:"";
-		overflow:hidden;
-		display:block;
-		margin-top:-4px;
-		width:6px;
-		height:12px;
-		background:url(../img/bg_boarding_pass_sprite.png) 100% 0 no-repeat;
-		}
-	.boarding-pass hr:before {
-		margin-left:-16px; 
-		}
-	.boarding-pass hr:after {
-		left:100%;
-		margin-left:10px;
-		background-position:0 0;
-		}
+
 
 /* Event Ticket */
 .event-ticket {

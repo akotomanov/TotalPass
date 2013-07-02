@@ -41,11 +41,11 @@
 
 		<div id="container">
 
-			<div class="flip-container">
+			<!-- Boarding Pass -->
+			<div class="pass boarding-pass square-bar-code flip-container" ontouchstart="this.classList.toggle('hover');">
 				<div class="flipper">
-					<div class="front">
-						<!-- Boarding Pass -->
-						<section class="pass boarding-pass square-bar-code">
+					<section class="pass-front-side">
+						<!--<section class="pass boarding-pass ">-->
 							<header class="clearfix">
 								<div class="logo-container">
 									<svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="160" height="50" viewBox="0 0 757.275 138.223" overflow="visible" enable-background="new 0 0 757.275 138.223" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace">
@@ -83,9 +83,9 @@
 
 								<div class="ico">
 									<svg version="1.1"
-										 xmlns:svg="http://www.w3.org/2000/svg"
-										 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px"
-										 viewBox="208.975 215.333 30 30">
+									     xmlns:svg="http://www.w3.org/2000/svg"
+									     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px"
+									     viewBox="208.975 215.333 30 30">
 										<g>
 											<path fill="#ffffff" d="M237.201,228.586c2.195,0.004,2.195,3.313-0.062,3.311h-9.209l-7.75,12.893h-3.402l4.223-12.831h-6.883
 												l-2.32,2.969h-2.691l1.423-4.578l-1.423-4.578h2.691l2.32,2.938h6.883l-4.223-12.833h3.402l7.75,12.709H237.201z"/>
@@ -134,312 +134,328 @@
 							</figure><!-- /.bar-code -->
 
 							<a class="ico-info ir" href="#">info</a>
-						</section>
-						<!-- /Boarding Pass -->
-					</div>
-					<div class="back">
-						back
-					</div>
+						<!--</section>-->
+
+					</section>
+					<section class="pass-back-side">
+						<header class="clearfix">
+							<button class="btn btn-done">Done</button>
+						</header>
+						<div class="content-container">
+							<div class="content">
+								<h3>Отказ от ответственности</h3>
+
+								<p>Nullam id dolor id <a href="#">nibh ultricies vehicula</a> ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+								<p>Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+
+								<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+								<p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
+			<!-- /Boarding Pass -->
 
 
 
-			<!-- Event Ticket with Background Image -->
-			<section class="pass event-ticket">
-				<header class="clearfix">
-					<div class="logo-container">
-						<img class="logo" src="img/content/logo_mic.png">
-						<h1 class="logo-text">Summer Jazz Festival</h1>
-					</div>
-					<div class="header-fields">
-						<p class="totalpass-label">совместно с <strong>totalpass</strong></p>
-					</div>
-				</header>
+			<!--&lt;!&ndash; Event Ticket with Background Image &ndash;&gt;-->
+			<!--<section class="pass event-ticket">-->
+				<!--<header class="clearfix">-->
+					<!--<div class="logo-container">-->
+						<!--<img class="logo" src="img/content/logo_mic.png">-->
+						<!--<h1 class="logo-text">Summer Jazz Festival</h1>-->
+					<!--</div>-->
+					<!--<div class="header-fields">-->
+						<!--<p class="totalpass-label">совместно с <strong>totalpass</strong></p>-->
+					<!--</div>-->
+				<!--</header>-->
 
-				<div class="wrapper clearfix">
-					<div class="primary-secondary-fields-wrapper">
-						<div class="primary-field">
-							<dl>
-								<dt class="label">Event</dt>
-								<dd class="value">The Beat Goes On</dd>
-							</dl>
-						</div><!-- /.primary-field -->
+				<!--<div class="wrapper clearfix">-->
+					<!--<div class="primary-secondary-fields-wrapper">-->
+						<!--<div class="primary-field">-->
+							<!--<dl>-->
+								<!--<dt class="label">Event</dt>-->
+								<!--<dd class="value">The Beat Goes On</dd>-->
+							<!--</dl>-->
+						<!--</div>&lt;!&ndash; /.primary-field &ndash;&gt;-->
 
-						<div class="secondary-fields">
-							<dl>
-								<dt class="label">Location</dt>
-								<dd class="value">County Fairgrounds</dd>
+						<!--<div class="secondary-fields">-->
+							<!--<dl>-->
+								<!--<dt class="label">Location</dt>-->
+								<!--<dd class="value">County Fairgrounds</dd>-->
 
-								<dt class="label">Time</dt>
-								<dd class="value">8:00 PM</dd>
-							</dl>
-						</div><!-- /.secondary-fields -->
-					</div>
+								<!--<dt class="label">Time</dt>-->
+								<!--<dd class="value">8:00 PM</dd>-->
+							<!--</dl>-->
+						<!--</div>&lt;!&ndash; /.secondary-fields &ndash;&gt;-->
+					<!--</div>-->
 
-					<div class="thumbnail clearfix">
-						<img src="http://placekitten.com/80/80" alt=""/>
-					</div><!-- /.thumbnail -->
-				</div>
+					<!--<div class="thumbnail clearfix">-->
+						<!--<img src="http://placekitten.com/80/80" alt=""/>-->
+					<!--</div>&lt;!&ndash; /.thumbnail &ndash;&gt;-->
+				<!--</div>-->
 
-				<div class="auxiliary-fields">
-					&nbsp;
-				</div><!-- /.auxiliary-fields -->
+				<!--<div class="auxiliary-fields">-->
+					<!--&nbsp;-->
+				<!--</div>&lt;!&ndash; /.auxiliary-fields &ndash;&gt;-->
 
-				<figure class="bar-code">
-					<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">
-					<figcaption class="caption">31415926</figcaption>
-				</figure><!-- /.bar-code -->
+				<!--<figure class="bar-code">-->
+					<!--<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">-->
+					<!--<figcaption class="caption">31415926</figcaption>-->
+				<!--</figure>&lt;!&ndash; /.bar-code &ndash;&gt;-->
 
-				<a class="ico-info ir" href="#">info</a>
+				<!--<a class="ico-info ir" href="#">info</a>-->
 
-				<div class="bg-image">
-					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="280" height="280">
-						<image class="svg-blur-img" style="filter:url(#blur-effect);" xlink:href="img/content/bg_jazz.png" width="280" height="280" />
-					    <filter id="blur-effect" x="-10%" y="-10%" width="120%" height="120%">
-					        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-					    </filter>
-					</svg>
-				</div>
-			</section>
-			<!-- /Event Ticket with Background Image -->
-
-
-
-			<!-- Event Ticket with Strip Image -->
-			<section class="pass event-ticket stripped">
-				<header class="clearfix">
-					<div class="logo-container">
-						<img class="logo" src="img/content/logo_mic.png">
-						<h1 class="logo-text">Summer Jazz Festival</h1>
-					</div>
-					<div class="header-fields">
-						<p class="totalpass-label">совместно с <strong>totalpass</strong></p>
-					</div>
-				</header>
-
-				<div class="strip" style="background-image:url(img/content/bnr_jazz.jpg);">
-					<div class="primary-field">
-						<h2>The Beat Goes On</h2>
-						<p>Event</p>
-					</div><!-- /.primary-field -->
-				</div><!-- /.strip -->
-
-				<div class="secondary-fields">
-					<div class="row clearfix">
-						<div class="span2">
-							<div class="label">Location</div>
-							<div class="value">County Fairgrounds</div>
-						</div>
-						<div class="span2">
-							<div class="label">Time</div>
-							<div class="value">8:00 PM</div>
-						</div>
-					</div>
-				</div><!-- /.secondary-fields -->
-
-				<div class="auxiliary-fields">
-					&nbsp;
-				</div><!-- /.auxiliary-fields -->
-
-				<figure class="bar-code">
-					<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">
-					<figcaption class="caption">31415926</figcaption>
-				</figure><!-- /.bar-code -->
-
-				<a class="ico-info ir" href="#">info</a>
-			</section>
-			<!-- /Event Ticket with Strip Image -->
+				<!--<div class="bg-image">-->
+					<!--<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="280" height="280">-->
+						<!--<image class="svg-blur-img" style="filter:url(#blur-effect);" xlink:href="img/content/bg_jazz.png" width="280" height="280" />-->
+					    <!--<filter id="blur-effect" x="-10%" y="-10%" width="120%" height="120%">-->
+					        <!--<feGaussianBlur in="SourceGraphic" stdDeviation="5" />-->
+					    <!--</filter>-->
+					<!--</svg>-->
+				<!--</div>-->
+			<!--</section>-->
+			<!--&lt;!&ndash; /Event Ticket with Background Image &ndash;&gt;-->
 
 
 
-			<!-- Retail Coupon -->
-			<section class="pass retail-coupon">
-				<header class="clearfix">
-					<div class="logo-container">
-						<img class="logo" src="img/content/logo_paw.png">
-						<h1 class="logo-text">Paw Planet</h1>
-					</div>
-					<div class="header-fields">
-						<p class="totalpass-label">совместно с <strong>totalpass</strong></p>
-					</div>
-				</header>
+			<!--&lt;!&ndash; Event Ticket with Strip Image &ndash;&gt;-->
+			<!--<section class="pass event-ticket stripped">-->
+				<!--<header class="clearfix">-->
+					<!--<div class="logo-container">-->
+						<!--<img class="logo" src="img/content/logo_mic.png">-->
+						<!--<h1 class="logo-text">Summer Jazz Festival</h1>-->
+					<!--</div>-->
+					<!--<div class="header-fields">-->
+						<!--<p class="totalpass-label">совместно с <strong>totalpass</strong></p>-->
+					<!--</div>-->
+				<!--</header>-->
 
-				<hr>
+				<!--<div class="strip" style="background-image:url(img/content/bnr_jazz.jpg);">-->
+					<!--<div class="primary-field">-->
+						<!--<h2>The Beat Goes On</h2>-->
+						<!--<p>Event</p>-->
+					<!--</div>&lt;!&ndash; /.primary-field &ndash;&gt;-->
+				<!--</div>&lt;!&ndash; /.strip &ndash;&gt;-->
 
-				<div class="strip" style="background-image:url();">
-					<div class="primary-field">
-						<h2>20% off</h2>
-						<p>Any premium dog food</p>
-					</div><!-- /.primary-field -->
-				</div><!-- /.strip -->
+				<!--<div class="secondary-fields">-->
+					<!--<div class="row clearfix">-->
+						<!--<div class="span2">-->
+							<!--<div class="label">Location</div>-->
+							<!--<div class="value">County Fairgrounds</div>-->
+						<!--</div>-->
+						<!--<div class="span2">-->
+							<!--<div class="label">Time</div>-->
+							<!--<div class="value">8:00 PM</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>&lt;!&ndash; /.secondary-fields &ndash;&gt;-->
 
-				<div class="secondary-and-auxiliary-fields">
-					<div class="row clearfix">
-						<div class="span2">
-							<div class="label">Expires</div>
-							<div class="value">2 weeks</div>
-						</div>
-					</div>
-				</div><!-- /.secondary-and-auxiliary-fields -->
+				<!--<div class="auxiliary-fields">-->
+					<!--&nbsp;-->
+				<!--</div>&lt;!&ndash; /.auxiliary-fields &ndash;&gt;-->
 
-				<figure class="bar-code">
-					<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">
-					<figcaption class="caption">31415926</figcaption>
-				</figure><!-- /.bar-code -->
+				<!--<figure class="bar-code">-->
+					<!--<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">-->
+					<!--<figcaption class="caption">31415926</figcaption>-->
+				<!--</figure>&lt;!&ndash; /.bar-code &ndash;&gt;-->
 
-				<a class="ico-info ir" href="#">info</a>
-			</section>
-			<!-- /Retail Coupon -->
-
-
-
-			<!-- Store Card  -->
-			<section class="pass store-card">
-				<header class="clearfix">
-					<div class="logo-container">
-						<img class="logo" src="img/content/logo_coffee.png">
-						<h1 class="logo-text">Bayroast Coffee</h1>
-					</div>
-					<div class="header-fields">
-						<p class="totalpass-label">совместно с <strong>totalpass</strong></p>
-					</div>
-				</header>
-
-				<div class="strip" style="background-image:url(img/content/bnr_coffee.jpg);">
-					<div class="primary-field">
-						<h2>$25.00</h2>
-						<p>remaining balance</p>
-					</div><!-- /.primary-field -->
-				</div><!-- /.strip -->
-
-				<div class="secondary-and-auxiliary-fields">
-					<div class="row clearfix">
-						<div class="span2">
-							<div class="label">level</div>
-							<div class="value">Gold</div>
-						</div>
-						<div class="span2">
-							<div class="label">the usual</div>
-							<div class="value">Iced Mocha</div>
-						</div>
-					</div>
-				</div><!-- /.secondary-and-auxiliary-fields -->
-
-				<figure class="bar-code">
-					<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">
-					<figcaption class="caption">31415926</figcaption>
-				</figure><!-- /.bar-code -->
-
-				<a class="ico-info ir" href="#">info</a>
-			</section>
-			<!-- /Store Card  -->
+				<!--<a class="ico-info ir" href="#">info</a>-->
+			<!--</section>-->
+			<!--&lt;!&ndash; /Event Ticket with Strip Image &ndash;&gt;-->
 
 
 
-			<!-- Generic Pass with Rectangular Barcode -->
-			<section class="pass generic">
-				<header class="clearfix">
-					<div class="logo-container">
-						<img class="logo" src="img/content/logo_toy.png">
-						<h1 class="logo-text">Toy Town</h1>
-					</div>
-					<div class="header-fields">
-						<p class="totalpass-label">совместно с <strong>totalpass</strong></p>
-					</div>
-				</header>
+			<!--&lt;!&ndash; Retail Coupon &ndash;&gt;-->
+			<!--<section class="pass retail-coupon">-->
+				<!--<header class="clearfix">-->
+					<!--<div class="logo-container">-->
+						<!--<img class="logo" src="img/content/logo_paw.png">-->
+						<!--<h1 class="logo-text">Paw Planet</h1>-->
+					<!--</div>-->
+					<!--<div class="header-fields">-->
+						<!--<p class="totalpass-label">совместно с <strong>totalpass</strong></p>-->
+					<!--</div>-->
+				<!--</header>-->
 
-				<hr>
+				<!--<hr>-->
 
-				<div class="wrapper clearfix">
-					<div class="primary-field">
-						<h2>Membership</h2>
-						<p>2012</p>
-					</div><!-- /.primary-field -->
+				<!--<div class="strip" style="background-image:url();">-->
+					<!--<div class="primary-field">-->
+						<!--<h2>20% off</h2>-->
+						<!--<p>Any premium dog food</p>-->
+					<!--</div>&lt;!&ndash; /.primary-field &ndash;&gt;-->
+				<!--</div>&lt;!&ndash; /.strip &ndash;&gt;-->
 
-					<div class="thumbnail clearfix">
-						<img src="http://placekitten.com/80/80" alt=""/>
-					</div><!-- /.thumbnail -->
-				</div>
+				<!--<div class="secondary-and-auxiliary-fields">-->
+					<!--<div class="row clearfix">-->
+						<!--<div class="span2">-->
+							<!--<div class="label">Expires</div>-->
+							<!--<div class="value">2 weeks</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>&lt;!&ndash; /.secondary-and-auxiliary-fields &ndash;&gt;-->
 
-				<div class="secondary-fields">
-					<div class="row clearfix">
-						<div class="span2">
-							<div class="label">Level</div>
-							<div class="value">Gold</div>
-						</div>
-						<div class="span2">
-							<div class="label">Since</div>
-							<div class="value">2002</div>
-						</div>
-					</div>
-				</div><!-- /.secondary-fields -->
+				<!--<figure class="bar-code">-->
+					<!--<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">-->
+					<!--<figcaption class="caption">31415926</figcaption>-->
+				<!--</figure>&lt;!&ndash; /.bar-code &ndash;&gt;-->
 
-				<div class="auxiliary-fields">
-					&nbsp;
-				</div><!-- /.auxiliary-fields -->
-
-				<figure class="bar-code">
-					<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">
-					<figcaption class="caption">31415926</figcaption>
-				</figure><!-- /.bar-code -->
-
-				<a class="ico-info ir" href="#">info</a>
-			</section>
-			<!-- /Generic Pass with Rectangular Barcode -->
+				<!--<a class="ico-info ir" href="#">info</a>-->
+			<!--</section>-->
+			<!--&lt;!&ndash; /Retail Coupon &ndash;&gt;-->
 
 
 
-			<!-- Generic Pass with Square Barcode -->
-			<section class="pass generic square-bar-code">
-				<header class="clearfix">
-					<div class="logo-container">
-						<img class="logo" src="img/content/logo_toy.png">
-						<h1 class="logo-text">Toy Town</h1>
-					</div>
-					<div class="header-fields">
-						<p class="totalpass-label">совместно с <strong>totalpass</strong></p>
-					</div>
-				</header>
+			<!--&lt;!&ndash; Store Card  &ndash;&gt;-->
+			<!--<section class="pass store-card">-->
+				<!--<header class="clearfix">-->
+					<!--<div class="logo-container">-->
+						<!--<img class="logo" src="img/content/logo_coffee.png">-->
+						<!--<h1 class="logo-text">Bayroast Coffee</h1>-->
+					<!--</div>-->
+					<!--<div class="header-fields">-->
+						<!--<p class="totalpass-label">совместно с <strong>totalpass</strong></p>-->
+					<!--</div>-->
+				<!--</header>-->
 
-				<hr>
+				<!--<div class="strip" style="background-image:url(img/content/bnr_coffee.jpg);">-->
+					<!--<div class="primary-field">-->
+						<!--<h2>$25.00</h2>-->
+						<!--<p>remaining balance</p>-->
+					<!--</div>&lt;!&ndash; /.primary-field &ndash;&gt;-->
+				<!--</div>&lt;!&ndash; /.strip &ndash;&gt;-->
 
-				<div class="wrapper clearfix">
-					<div class="primary-field">
-						<h2>Membership</h2>
-						<p>2012</p>
-					</div><!-- /.primary-field -->
+				<!--<div class="secondary-and-auxiliary-fields">-->
+					<!--<div class="row clearfix">-->
+						<!--<div class="span2">-->
+							<!--<div class="label">level</div>-->
+							<!--<div class="value">Gold</div>-->
+						<!--</div>-->
+						<!--<div class="span2">-->
+							<!--<div class="label">the usual</div>-->
+							<!--<div class="value">Iced Mocha</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>&lt;!&ndash; /.secondary-and-auxiliary-fields &ndash;&gt;-->
 
-					<div class="thumbnail clearfix">
-						<img src="http://placekitten.com/g/60/80" alt=""/>
-					</div><!-- /.thumbnail -->
-				</div>
+				<!--<figure class="bar-code">-->
+					<!--<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">-->
+					<!--<figcaption class="caption">31415926</figcaption>-->
+				<!--</figure>&lt;!&ndash; /.bar-code &ndash;&gt;-->
 
-				<div class="secondary-and-auxiliary-fields">
-					<div class="row clearfix">
-						<div class="span3">
-							<div class="label">Level</div>
-							<div class="value">Gold</div>
-						</div>
-						<div class="span3">
-							<div class="label">Since</div>
-							<div class="value">2002</div>
-						</div>
-						<div class="span3">
-							<div class="label">Label</div>
-							<div class="value">Value</div>
-						</div>
-					</div>
-				</div><!-- /.secondary-and-auxiliary-fields -->
+				<!--<a class="ico-info ir" href="#">info</a>-->
+			<!--</section>-->
+			<!--&lt;!&ndash; /Store Card  &ndash;&gt;-->
 
-				<figure class="bar-code">
-					<img class="img-bar-code" src="img/content/qr-code.svg">
-					<figcaption class="caption">31415926</figcaption>
-				</figure><!-- /.bar-code -->
 
-				<a class="ico-info ir" href="#">info</a>
-			</section>
-			<!-- /Generic Pass with Square Barcode -->
+
+			<!--&lt;!&ndash; Generic Pass with Rectangular Barcode &ndash;&gt;-->
+			<!--<section class="pass generic">-->
+				<!--<header class="clearfix">-->
+					<!--<div class="logo-container">-->
+						<!--<img class="logo" src="img/content/logo_toy.png">-->
+						<!--<h1 class="logo-text">Toy Town</h1>-->
+					<!--</div>-->
+					<!--<div class="header-fields">-->
+						<!--<p class="totalpass-label">совместно с <strong>totalpass</strong></p>-->
+					<!--</div>-->
+				<!--</header>-->
+
+				<!--<hr>-->
+
+				<!--<div class="wrapper clearfix">-->
+					<!--<div class="primary-field">-->
+						<!--<h2>Membership</h2>-->
+						<!--<p>2012</p>-->
+					<!--</div>&lt;!&ndash; /.primary-field &ndash;&gt;-->
+
+					<!--<div class="thumbnail clearfix">-->
+						<!--<img src="http://placekitten.com/80/80" alt=""/>-->
+					<!--</div>&lt;!&ndash; /.thumbnail &ndash;&gt;-->
+				<!--</div>-->
+
+				<!--<div class="secondary-fields">-->
+					<!--<div class="row clearfix">-->
+						<!--<div class="span2">-->
+							<!--<div class="label">Level</div>-->
+							<!--<div class="value">Gold</div>-->
+						<!--</div>-->
+						<!--<div class="span2">-->
+							<!--<div class="label">Since</div>-->
+							<!--<div class="value">2002</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>&lt;!&ndash; /.secondary-fields &ndash;&gt;-->
+
+				<!--<div class="auxiliary-fields">-->
+					<!--&nbsp;-->
+				<!--</div>&lt;!&ndash; /.auxiliary-fields &ndash;&gt;-->
+
+				<!--<figure class="bar-code">-->
+					<!--<img class="img-bar-code" src="http://www.racoindustries.com/barcodegenerator/2d/barcode-image.axd?S=Pdf417&BW=0.025&BM=0&C=31415926&IFMT=Jpeg&PDFC=0&PDFCT=Binary&PDFEC=Level0&PDFR=0&QZ=0&TM=0" alt="31415926">-->
+					<!--<figcaption class="caption">31415926</figcaption>-->
+				<!--</figure>&lt;!&ndash; /.bar-code &ndash;&gt;-->
+
+				<!--<a class="ico-info ir" href="#">info</a>-->
+			<!--</section>-->
+			<!--&lt;!&ndash; /Generic Pass with Rectangular Barcode &ndash;&gt;-->
+
+
+
+			<!--&lt;!&ndash; Generic Pass with Square Barcode &ndash;&gt;-->
+			<!--<section class="pass generic square-bar-code">-->
+				<!--<header class="clearfix">-->
+					<!--<div class="logo-container">-->
+						<!--<img class="logo" src="img/content/logo_toy.png">-->
+						<!--<h1 class="logo-text">Toy Town</h1>-->
+					<!--</div>-->
+					<!--<div class="header-fields">-->
+						<!--<p class="totalpass-label">совместно с <strong>totalpass</strong></p>-->
+					<!--</div>-->
+				<!--</header>-->
+
+				<!--<hr>-->
+
+				<!--<div class="wrapper clearfix">-->
+					<!--<div class="primary-field">-->
+						<!--<h2>Membership</h2>-->
+						<!--<p>2012</p>-->
+					<!--</div>&lt;!&ndash; /.primary-field &ndash;&gt;-->
+
+					<!--<div class="thumbnail clearfix">-->
+						<!--<img src="http://placekitten.com/g/60/80" alt=""/>-->
+					<!--</div>&lt;!&ndash; /.thumbnail &ndash;&gt;-->
+				<!--</div>-->
+
+				<!--<div class="secondary-and-auxiliary-fields">-->
+					<!--<div class="row clearfix">-->
+						<!--<div class="span3">-->
+							<!--<div class="label">Level</div>-->
+							<!--<div class="value">Gold</div>-->
+						<!--</div>-->
+						<!--<div class="span3">-->
+							<!--<div class="label">Since</div>-->
+							<!--<div class="value">2002</div>-->
+						<!--</div>-->
+						<!--<div class="span3">-->
+							<!--<div class="label">Label</div>-->
+							<!--<div class="value">Value</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>&lt;!&ndash; /.secondary-and-auxiliary-fields &ndash;&gt;-->
+
+				<!--<figure class="bar-code">-->
+					<!--<img class="img-bar-code" src="img/content/qr-code.svg">-->
+					<!--<figcaption class="caption">31415926</figcaption>-->
+				<!--</figure>&lt;!&ndash; /.bar-code &ndash;&gt;-->
+
+				<!--<a class="ico-info ir" href="#">info</a>-->
+			<!--</section>-->
+			<!--&lt;!&ndash; /Generic Pass with Square Barcode &ndash;&gt;-->
 
 
 
