@@ -42,7 +42,7 @@
 		<div id="container">
 
 			<!-- Boarding Pass -->
-			<div class="pass boarding-pass square-bar-code flip-container" ontouchstart="this.classList.toggle('hover');">
+			<div id="flip-toggle" class="pass boarding-pass square-bar-code flip-container">
 				<div class="flipper">
 					<section class="pass-front-side">
 						<!--<section class="pass boarding-pass ">-->
@@ -463,6 +463,20 @@
 
 		<script src="js/vendor/zepto.min.js"></script>
 		<script src="js/helper.js"></script>
+
+		<script type="text/javascript">
+			$(function(){
+				$(".btn-done").click(function(){
+					$(this).parent().parent().parent().parent().removeClass("flip");
+					return false;
+				});
+
+				$(".ico-info").click(function(){
+					$(this).parent().parent().parent().addClass("flip");
+					return false;
+				});
+			});
+		</script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>

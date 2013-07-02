@@ -102,8 +102,6 @@ body {background:#000;}
 		transform-style:preserve-3d;
 		position: relative;
 		}
-		.pass:hover .flipper,
-		.pass.hover .flipper,
 		.pass.flip .flipper {
 			-webkit-transform:rotateY(180deg);
 			-moz-transform:rotateY(180deg);
