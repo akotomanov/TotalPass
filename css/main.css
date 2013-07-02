@@ -503,8 +503,11 @@ body {background:#000;}
 		}
 
 
-/* Event Ticket */
-.event-ticket {
+/*
+ * Event Ticket
+ -------------------------------------------------------------------------------- */
+.event-ticket .pass-front-side,
+.event-ticket .pass-back-side {
 	background:#d0838f; /* Old browsers */
 	background:-moz-linear-gradient(top, #d0838f 0%, #b90623 10%, #a8021d 75%, #a80d26 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#d0838f), color-stop(10%,#b90623), color-stop(75%,#a8021d), color-stop(100%,#a80d26)); /* Chrome,Safari4+ */
@@ -520,7 +523,8 @@ body {background:#000;}
 	-webkit-border-radius:0;
 	border-radius:0;
 	}
-	.event-ticket:before {
+	.event-ticket .pass-front-side:before,
+	.event-ticket .pass-back-side:before {
 		position:absolute;
 		top:0;
 		left:50%;
@@ -535,8 +539,8 @@ body {background:#000;}
 	.event-ticket .strip {
 		height:84px;
 		}
-		.event-ticket h2 { margin-top:0; }
-	.event-ticket header,
+		.event-ticket .pass-front-side h2 { margin-top:0; }
+	.event-ticket .pass-front-side header,
 	.event-ticket .wrapper,
 	.event-ticket .auxiliary-fields {
 		position:relative;
@@ -551,14 +555,14 @@ body {background:#000;}
 		width:280px;
 		height:280px;
 		}
-	.event-ticket .label {
+	.event-ticket .pass-front-side .label {
 		text-transform:lowercase;
 		font-size:12px;
 		font-weight:700;
 		letter-spacing:.1em;
 		text-shadow:0 1px 2px rgba(0,0,0,.5);
 		}
-	.event-ticket .value {
+	.event-ticket .pass-front-side .value {
 		overflow:hidden;
 		white-space:nowrap;
 		text-overflow:ellipsis;
@@ -573,8 +577,11 @@ body {background:#000;}
 			font-size:18px; 
 			}
 
-/* Retail Coupon */
-.retail-coupon {
+/*
+ * Retail Coupon
+ -------------------------------------------------------------------------------- */
+.retail-coupon .pass-front-side,
+.retail-coupon .pass-back-side {
 	background:#edd876; /* Old browsers */
 	background:-moz-linear-gradient(top, #edd876 0%, #e7c95b 10%, #cd8b3e 90%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#edd876), color-stop(10%,#e7c95b), color-stop(90%,#cd8b3e)); /* Chrome,Safari4+ */
@@ -587,21 +594,25 @@ body {background:#000;}
 	-webkit-border-radius:0;
 	border-radius:0;
 	}
-	.retail-coupon:before,
-	.retail-coupon:after {
+	.retail-coupon .pass-front-side:before,
+	.retail-coupon .pass-front-side:after,
+	.retail-coupon .pass-back-side:before,
+	.retail-coupon .pass-back-side:after {
 		position:absolute;
 		left:0;
 		z-index:100;
 		content:"";
 		display:block;
 		width:312px;
-		height:8px;
+		height:6px;
 		}
-	.retail-coupon:before {
+	.retail-coupon .pass-front-side:before,
+	.retail-coupon .pass-back-side:before {
 		top:0;
 		background:url(../img/bg_coupon_top.png) 50% 0 no-repeat;
 		}
-	.retail-coupon:after {
+	.retail-coupon .pass-front-side:after,
+	.retail-coupon .pass-back-side:after {
 		bottom:0;
 		background:url(../img/bg_coupon_bottom.png) 50% 100% no-repeat;
 		}
@@ -627,19 +638,22 @@ body {background:#000;}
 	    font-size:18px;
 	    font-weight:300;
 	    }
-	.retail-coupon .label {
+	.retail-coupon .pass-front-side .label {
 		text-transform:uppercase;
 		font-size:12px;
 		color:rgba(0,0,0,.5);
 		text-shadow:0 1px 1px rgba(255,255,255,.1);
 		}
-	.retail-coupon .value {
+	.retail-coupon .pass-front-side .value {
 		font-size:26px;
 		font-weight:100;
 		}
 
-/* Store Card */
-.store-card {
+/*
+ * Store Card
+ -------------------------------------------------------------------------------- */
+.store-card .pass-front-side,
+.store-card .pass-back-side {
 	background:#cc9475; /* Old browsers */
 	background:-moz-linear-gradient(top, #cc9475 0%, #b8744f 10%, #764a32 90%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc9475), color-stop(10%,#b8744f), color-stop(90%,#764a32)); /* Chrome,Safari4+ */
@@ -666,19 +680,22 @@ body {background:#000;}
 	    font-size:18px;
 	    font-weight:300;
 	    }
-	.store-card .label {
+	.store-card .pass-front-side .label {
 		text-transform:uppercase;
 		font-size:12px;
 		color:rgba(0,0,0,.5);
 		text-shadow:0 1px 1px rgba(255,255,255,.1);
 		}
-	.store-card .value {
+	.store-card .pass-front-side .value {
 		font-size:26px;
 		font-weight:100;
 		}
 
-/* Generic Pass */
-.generic {
+/*
+ * Generic Pass
+ -------------------------------------------------------------------------------- */
+.generic .pass-front-side,
+.generic .pass-back-side {
 	background:#ec5c5e; /* Old browsers */
 	background:-moz-linear-gradient(top, #ec5c5e 0%, #e03136 10%, #bd2125 90%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ec5c5e), color-stop(10%,#e03136), color-stop(90%,#bd2125)); /* Chrome,Safari4+ */
@@ -704,13 +721,13 @@ body {background:#000;}
 	.generic .primary-field h2 {
 		font-size:30px;
 		}
-	.generic .label {
+	.generic .pass-front-side .label {
 		text-transform:uppercase;
 		font-size:12px;
 		color:rgba(0,0,0,.5);
 		text-shadow:0 1px 1px rgba(255,255,255,.1);
 		}
-	.generic .value {
+	.generic .pass-front-side .value {
 		font-size:26px;
 		font-weight:100;
 		}
