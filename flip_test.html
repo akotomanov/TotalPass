@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Flip It</title>
+
+	<link rel="stylesheet" href="https://raw.github.com/necolas/normalize.css/master/normalize.css"/>
+	<style type="text/css">
+	body {
+		background-color: #eaf1f4;
+		font-size: 67.5%;
+		font-family: Helvetica, Tahoma, Verdana, sans-serif;
+		}
+	a { color: #1e90ff; }
+	.container {
+		width: 312px;
+		margin: 0 auto;
+		}
+
+	.pass {
+		color: #ffffff;
+		}
+
+	.flipper {
+		position:relative;
+		width: 312px;
+		height: 400px;
+		}
+		.pass .pass-front-side,
+		.pass .pass-back-side {
+			position:absolute;
+			left:0;
+			top:0;
+			width:312px;
+			height:400px;
+			background:#cf3;
+			}
+		.pass .pass-front-side {
+			z-index:2;
+			background:#3cf;
+			}
+
+
+	.ico-info,
+	.btn-back {
+		position:static;
+		padding: 5px 15px;
+		background: #1e90ff;
+		border: 2px solid #1e90ff;
+		border-radius: 2px;
+		color: #ffffff;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1em;
+		font-family: Helvetica, Tahoma, Verdana, sans-serif;
+		line-height: 30px;
+		height: 30px;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		-moz-box-shadow: 1px 1px 2px #999999;
+		-webkit-box-shadow: 1px 1px 2px #999999;
+		-webkit-transition-duration: 1s;
+		}
+	.ico-info:hover,
+	.btn-back:hover {
+		background-color: #ff9000;
+		border: 2px solid #ff9000;
+		}
+
+	</style>
+
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="pass">
+			<div class="flipper">
+				<div class="pass-front-side">
+					<h3>Front side</h3>
+
+					<a href="#" class="ico-info">Flip</a>
+
+					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+					<p>Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+				</div>
+
+				<div class="pass-back-side">
+					<h3>Back side</h3>
+
+					<a href="#" class="btn-back">Revert!</a>
+
+					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum.</p>
+
+					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Donec sed odio dui.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="http://lab.smashup.it/lab/flip/js/jquery.flip.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			if (Modernizr.csstransforms && Modernizr.csstransforms3d && Modernizr.csstransitions) {
+				Modernizr.load('css/flip.css');
+			} else {
+				Modernizr.load('js/flip.js');
+			}
+		});
+	</script>
+
+</body>
+</html>
