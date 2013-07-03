@@ -590,17 +590,27 @@
 		<script src="js/vendor/zepto.min.js"></script>
 		<script src="js/helper.js"></script>
 
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="http://lab.smashup.it/lab/flip/js/jquery.flip.min.js"></script>
+
 		<script type="text/javascript">
 			$(function(){
-				$(".btn-done").click(function(){
-					$(this).parent().parent().parent().parent().removeClass("flip");
-					return false;
-				});
+				if (Modernizr.csstransforms && Modernizr.csstransforms3d && Modernizr.csstransitions) {
+					Modernizr.load('css/flip.css');
 
-				$(".ico-info").click(function(){
-					$(this).parent().parent().parent().addClass("flip");
-					return false;
-				});
+					$(".btn-done").click(function(){
+						$(this).parent().parent().parent().parent().removeClass("flip");
+						return false;
+					});
+
+					$(".ico-info").click(function(){
+						$(this).parent().parent().parent().addClass("flip");
+						return false;
+					});
+				} else {
+					Modernizr.load('js/flip.js');
+				}
 			});
 		</script>
 
