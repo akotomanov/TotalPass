@@ -513,12 +513,14 @@ body {background:#000;}
 		}
 	.event-ticket .bg-image { 
 		position:absolute;
-		left:50%;
-		top:50%;
+		left:0;
+		top:0;
 		z-index:1;
-		margin:-140px 0 0 -140px;
-		width:280px;
-		height:280px;
+		display:table-cell;
+		width:312px;
+		height:400px;
+		text-align:center;
+		vertical-align:middle;
 		}
 	.event-ticket .pass-front-side .label {
 		text-transform:lowercase;
